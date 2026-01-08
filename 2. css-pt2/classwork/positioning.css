@@ -1,0 +1,68 @@
+body {
+  background-color: black;
+}
+
+.ima-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  width: min-content;
+}
+
+.container {
+  display: flex;
+  gap: 16px;
+}
+
+.container-2 {
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.box,
+.box-2 {
+  width: 100px;
+  height: 100px;
+}
+
+#box1,
+#box11 {
+  background-color: red;
+}
+
+#box2,
+#box22 {
+  background-color: green;
+  position: relative;
+}
+
+#box3 {
+  background-color: blue;
+  z-index: 1;
+}
+
+#box33 {
+  background-color: hotpink;
+}
+
+#box3 {
+  margin-top: 16px;
+}
+
+#box33 {
+  position: relative;
+  bottom: 64px;
+  z-index: 2;
+}
+
+#box4 {
+  width: 24px;
+  height: 24px;
+  background-color: yellow;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}

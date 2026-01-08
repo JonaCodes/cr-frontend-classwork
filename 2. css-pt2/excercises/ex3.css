@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, Arial;
+  background: #0b1020;
+  color: #eaf0ff;
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.links {
+  display: flex;
+  gap: 12px;
+}
+.links a {
+  color: #cfe0ff;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 12px;
+}
+.links a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.menu {
+  display: none;
+}
+
+.content {
+  padding: 18px;
+  display: flex;
+  gap: 14px;
+}
+
+.side {
+  width: 220px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.side-title {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.cards {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.card {
+  width: 160px;
+  height: 110px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 26px;
+  font-weight: 900;
+}
+
+/* layout stacks on smaller screens */
+@media (max-width: 700px) {
+  .content {
+    flex-direction: column;
+  }
+  .side {
+    width: auto;
+  }
+}
+
+/* nav switches + cards go full width */
+@media (min-width: 450px) {
+  .links {
+    display: none;
+  }
+  .menu {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+    color: #eaf0ff;
+    padding: 8px 10px;
+    border-radius: 12px;
+  }
+  .card {
+    width: 100%;
+  }
+}

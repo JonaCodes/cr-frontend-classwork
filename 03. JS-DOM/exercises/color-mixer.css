@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #f6f7fb;
+  color: #111827;
+  font-family: system-ui, sans-serif;
+}
+
+.app {
+  width: min(860px, calc(100% - 28px));
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 12px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  color: #374151;
+}
+
+input {
+  width: 120px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: white;
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn:hover {
+  background: #0b1220;
+}
+
+.btn.ghost {
+  background: white;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+.btn.ghost:hover {
+  background: #f3f4f6;
+}
+
+.grid {
+  display: grid;
+  border: 1px solid #111827;
+  background: white;
+  width: 100%;
+  max-width: 860px;
+}
+
+.cell {
+  background: white;
+  border: 1px solid #111827;
+  aspect-ratio: 1 / 1; /* keeps squares */
+}
+
+.hint {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: #6b7280;
+}

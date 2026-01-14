@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Grid</title>
+    <link rel="stylesheet" href="color-mixer.css" />
+    <script defer src="color-mixer.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <h1>Hover Grid</h1>
+
+      <div class="controls">
+        <label>
+          Columns
+          <input id="cols" type="number" min="1" max="60" value="16" />
+        </label>
+
+        <label>
+          Rows
+          <input id="rows" type="number" min="1" max="60" value="10" />
+        </label>
+
+        <div id="buildBtn" class="btn">Build grid</div>
+        <div id="clearBtn" class="btn ghost">Clear</div>
+      </div>
+
+      <div id="grid" class="grid"></div>
+
+      <p class="hint">Hover a cell to paint it. Click “Clear” to reset.</p>
+    </div>
+  </body>
+</html>

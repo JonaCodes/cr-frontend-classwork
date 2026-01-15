@@ -1,48 +1,39 @@
-// hoist
-function writeLog(age: number, height: number): void {
-  console.log(`Hello ${age}, you awesome human`, height, "asd");
-}
-
-// const name = "Lena";
-
-interface Person {
-  name: string;
-  age: number;
-  isMonsterBeketaTov: boolean;
-}
-
-const person: Person = {
-  name: "Lena",
-  age: 25,
-  isMonsterBeketaTov: true,
-};
-writeSecondLog();
-
-function writeSecondLog(): void {
-  console.log("Hello 3");
-}
-
-const writeThirdLog = function (): void {
-  console.log("Hello 4");
-};
-
-const obj = {
-  name: "lena",
-  fn: writeThirdLog,
-};
-
 const button = document.getElementById("button");
 button?.addEventListener("click", handleClick);
 
+const posts: { id: number; content: string }[] = [];
+let runningId = 0;
+
 function handleClick() {
+  // @ts-ignore
   const content = document?.getElementById("input")?.value;
   console.log(content);
 
-  const newPost = document.createElement("p");
-  newPost.classList.add("post");
-  newPost.textContent = content;
+  posts.push({ id: ++runningId, content });
 
-  console.log(newPost);
+  renderPosts();
+}
 
-  document.body.appendChild(newPost);
+function renderPosts() {
+  const postsContainer = document.getElementById("posts");
+
+  postsContainer!.innerHTML = "";
+  document.getElementsByTagName("input")[0].value = "";
+
+  posts.forEach((post) => {
+    const newPost = document.createElement("p");
+    newPost.classList.add("post");
+    newPost.textContent = post.content;
+
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.addEventListener("click", () => {
+      const index = posts.findIndex((p) => p.id === post.id);
+      posts.splice(index, 1);
+      renderPosts();
+    });
+
+    postsContainer!.appendChild(newPost);
+    postsContainer!.appendChild(deleteButton);
+  });
 }

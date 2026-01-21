@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pokédex</h1>
+
+      <div class="controls">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search by name or id (e.g. pikachu / 25)"
+        />
+        <button id="searchBtn">Search</button>
+
+        <div class="nav">
+          <button id="prevBtn">Prev</button>
+          <button id="nextBtn">Next</button>
+        </div>
+
+        <button id="saveBtn">Save to My Pokémon</button>
+      </div>
+
+      <div id="status" class="status"></div>
+
+      <div class="section">
+        <h2>Current</h2>
+        <div id="current"></div>
+      </div>
+
+      <div class="section" id="my-pokemon-section">
+        <h2>My Pokémon</h2>
+        <div id="saved"></div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

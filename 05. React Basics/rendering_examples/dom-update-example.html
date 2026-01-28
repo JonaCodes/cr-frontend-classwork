@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM update demo</title>
+    <style>
+      .row {
+        display: flex;
+        gap: 10px;
+        margin: 20px 0;
+      }
+      .box {
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+        background: steelblue;
+      }
+      button {
+        padding: 10px 14px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">Toggle</button>
+
+    <div class="row">
+      <div id="a" class="box"></div>
+      <div id="b" class="box"></div>
+      <div id="c" class="box"></div>
+    </div>
+
+    <script>
+      const btn = document.getElementById("btn");
+      const a = document.getElementById("a");
+      const b = document.getElementById("b");
+      const c = document.getElementById("c");
+
+      let on = false;
+
+      btn.addEventListener("click", () => {
+        on = !on;
+        const color = on ? "tomato" : "steelblue";
+
+        debugger; // step through: each line is a DOM write
+        a.style.background = color;
+        b.style.background = color;
+        c.style.background = color;
+      });
+    </script>
+  </body>
+</html>

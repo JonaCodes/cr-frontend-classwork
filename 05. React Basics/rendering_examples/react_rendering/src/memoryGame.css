@@ -1,0 +1,117 @@
+.mg {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 16px;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+.mg__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.mg__title {
+  margin: 0;
+  font-size: 28px;
+}
+
+.mg__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.9;
+}
+
+.mg__board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mg__card {
+  width: 120px;
+  height: 90px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  background: white;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  user-select: none;
+}
+
+.mg__cardText {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mg__card--down {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.mg__card--up {
+  background: #fff;
+  color: #111;
+}
+
+.mg__card--matched {
+  background: #e9ffe9;
+  border-color: #3a8a3a;
+  color: #1b5e1b;
+}
+
+.mg__controls {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mg__hint {
+  margin: 0;
+  opacity: 0.8;
+}
+
+.mg__actions {
+  display: flex;
+  gap: 10px;
+}
+
+.mg__btn {
+  border: 1px solid #222;
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.mg__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mg__btn--ghost {
+  background: transparent;
+}
+
+.mg__btn--ok {
+  border-color: #2c7a2c;
+}
+
+.mg__btn--bad {
+  border-color: #9b2c2c;
+}

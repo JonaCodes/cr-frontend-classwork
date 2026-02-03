@@ -1,0 +1,11 @@
+.runner-up {
+  background-color: #121212;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.runner-up-subtext {
+  color: gray;
+  font-size: 12px;
+}

@@ -1,16 +1,7 @@
-import { useState } from "react";
-import Stats from "./Stats";
-import {
-  countWords,
-  countCharacters,
-  findMostCommonWord,
-  countSentences,
-  calculateAverageSentenceLength,
-} from "./statsCalculators";
 import "./ex5.css";
 
 export default function Ex5() {
-  const [text, setText] = useState("");
+  // Define the state that handles the text in the textArea
 
   return (
     <div className="text-analyzer-page">
@@ -19,19 +10,15 @@ export default function Ex5() {
 
         <textarea
           className="text-input"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
           placeholder="Start typing to see statistics..."
           rows={10}
+          // implement the onChange event that updates state
         />
 
-        <Stats
-          wordCount={countWords(text)}
-          charCount={countCharacters(text)}
-          mostCommonWord={findMostCommonWord(text)}
-          sentenceCount={countSentences(text)}
-          avgSentenceLength={calculateAverageSentenceLength(text)}
-        />
+        {/* 
+        Render the Stats component here, passing the calculated stats as props 
+        Note that you have all the necessary calculations defined in `statsCalculator.ts`
+        */}
       </div>
     </div>
   );

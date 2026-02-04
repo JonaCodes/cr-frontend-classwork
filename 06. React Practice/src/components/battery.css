@@ -1,0 +1,68 @@
+.battery {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: 250px !important;
+}
+
+.battery__body {
+  position: relative;
+  border: 2px solid #1f2937;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.battery__fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 8px;
+  transition: width 180ms ease;
+  background: currentColor;
+}
+
+.battery__cap {
+  width: 10px;
+  height: 22px;
+  border: 2px solid #1f2937;
+  border-left: 0;
+  border-radius: 0 8px 8px 0;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.battery__label {
+  min-width: 44px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* sizes */
+.battery--sm .battery__body {
+  width: 72px;
+  height: 20px;
+}
+
+.battery--md .battery__body {
+  width: 120px;
+  height: 28px;
+}
+.battery--md .battery__cap {
+  height: 22px;
+  width: 10px;
+}
+
+.battery--lg .battery__body {
+  width: 180px;
+  height: 38px;
+}
+
+/* color levels (currentColor drives the fill) */
+.battery--red {
+  color: #dc2626;
+}
+.battery--orange {
+  color: #f59e0b;
+}
+.battery--green {
+  color: #16a34a;
+}

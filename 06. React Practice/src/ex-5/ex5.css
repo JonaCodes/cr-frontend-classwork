@@ -1,0 +1,114 @@
+.text-analyzer-page {
+  background-color: #09090b;
+  border-radius: 8px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: "Trebuchet MS";
+  color: #fafafa;
+  width: 900px;
+}
+
+.text-analyzer {
+  width: 100%;
+}
+
+.text-analyzer h1 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 48px;
+  text-align: center;
+  letter-spacing: -0.03em;
+}
+
+.text-input {
+  width: 850px;
+  height: 150px;
+  padding: 24px;
+  font-size: 17px;
+  font-family: inherit;
+  line-height: 1.6;
+
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  resize: vertical;
+  margin-bottom: 32px;
+  transition: all 0.2s ease;
+  color: #f4f4f5;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 1px #6366f1;
+}
+
+.text-input::placeholder {
+  color: #52525b;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.stat-card,
+.stat-card-wide {
+  background: #18181b;
+  padding: 32px 24px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #27272a;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.stat-card:hover,
+.stat-card-wide:hover {
+  border-color: #3f3f46;
+  transform: translateY(-2px);
+}
+
+.stat-label {
+  display: block;
+  font-size: 11px;
+  color: #a1a1aa; /* Dimmed text for labels */
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.stat-value {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff; /* High-contrast white for values */
+}
+
+/* Sophisticated Indigo accent for key data */
+.stat-value.most-common {
+  font-size: 24px;
+  color: #818cf8;
+}
+
+/* Distinctive bottom card */
+.stat-card-wide {
+  background: #18181b;
+  border-bottom: 2px solid #6366f1; /* Subtle color bar at the bottom */
+}
+
+.stat-card-wide .stat-value {
+  font-size: 40px;
+  color: #f8fafc;
+}

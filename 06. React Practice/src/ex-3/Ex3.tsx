@@ -1,6 +1,4 @@
-import { useState } from "react";
 import "./ex3.css";
-import RaveBox from "./RaveBox";
 
 export default function Ex3() {
   const colors = [
@@ -18,33 +16,28 @@ export default function Ex3() {
     "#fd7e14",
   ];
 
-  const [selectedBox, setSelectedBox] = useState<number | null>(null);
+  /**
+   * Use `useState` to manage which box is currently selected (default null)
+   * Loop through the `colors` array and render a `RaveBox` component for each color
+   * Each RaveBox should receive (as props) the currently selectedBox, its own boxNumber, and which color it is
+
+   * In the `RaveBox` component, you should render a `div` that has two classes:
+   *    - "box" - always
+   *    - "on" - conditionally, based on whether *this* box matches the selected box
+   * The background color of each box should be set separately, using `style={{ background: color }}`
+
+   * Pressing the "Rave" button should set a random box as the selectedBox - use the `getRandomNumber` function
+   */
 
   const getRandomNumber = () => Math.floor(Math.random() * 12);
-
-  const rave = () => {
-    const originalNumber = getRandomNumber();
-    setSelectedBox(originalNumber);
-  };
 
   return (
     <>
       <div className="boxes-grid">
-        {colors.map((color, index) => {
-          return (
-            <RaveBox
-              key={color}
-              selectedBox={selectedBox}
-              boxNumber={index}
-              color={color}
-            />
-          );
-        })}
+        {/* Loop through the colors and render RaveBox components here */}
       </div>
 
-      <button className="rave-button" onClick={rave}>
-        Rave
-      </button>
+      <button className="rave-button">Rave</button>
     </>
   );
 }

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import HeaderView from "./HeaderView";
 import MessageView from "./MessageView";
 import HistoryView from "./HistoryView";
@@ -9,71 +8,58 @@ const randInt = (min: number, max: number) => {
 };
 
 export default function Ex6() {
-  const [secret] = useState(() => randInt(1, 100));
-  const [guessText, setGuessText] = useState("");
-  const [message, setMessage] = useState("Guess a number from 1 to 100.");
-  const [tries, setTries] = useState(0);
-  const [history, setHistory] = useState<number[]>([]);
-  const [won, setWon] = useState(false);
+  /** Define the relevant states - you should have, at least:
+   - A state for the guessed text
+   - A state for the message
+
+   Optionally, you can also add states for:
+   - Number of tries
+   - History of guesses
+  */
 
   const submitGuess = () => {
-    const guessNumber = Number(guessText);
+    /*
+      Implement the game logic here:
+      - Get the input number
+      - If the user guessed correctly, update the message to congratulate them
+      - If it's too low/high, update the message to say so
+      - Reset the input after each guess
 
-    setTries((latestTries) => latestTries + 1);
-    setHistory((latestHistory) => [guessNumber, ...latestHistory]);
-
-    if (guessNumber === secret) {
-      setMessage("Correct! 🎉");
-      setWon(true);
-    } else if (guessNumber < secret) {
-      setMessage("Too low.");
-    } else {
-      setMessage("Too high.");
-    }
-
-    setGuessText("");
+      - Optionally also:
+        - update the number of tries
+        - update the history array (show last guesses)
+    
+    */
   };
 
   const renderGuessInput = () => {
     return (
-      <input
-        autoFocus
-        type="number"
-        className="input"
-        value={guessText}
-        onChange={(e) => setGuessText(e.target.value)}
-        placeholder="Input your guess"
-        onKeyDown={(e) => {
-          if (e.key === "Enter") submitGuess();
-        }}
-      />
+      <>
+        {/* Render the input box here, with the appropriate onChange event */}
+      </>
     );
   };
 
-  const renderActions = () => {
+  const renderActionButton = () => {
     return (
-      <>
-        <button
-          className="btn primary"
-          onClick={submitGuess}
-          disabled={won || !guessText}
-        >
-          Guess
-        </button>
-      </>
+      <>{/* Render the Guess button here, with the appropriate onClick */}</>
     );
   };
 
   return (
     <div className="game">
       <div className="card">
-        <HeaderView tries={tries} />
+        {/* Optional TODO: pass `tries` from state */}
+        <HeaderView tries={0} />
 
         <div className="row">{renderGuessInput()}</div>
-        <div className="actions">{renderActions()}</div>
+        <div className="actions">{renderActionButton()}</div>
 
-        <MessageView message={message} />
-        <HistoryView history={history} />
+        {/* TODO: pass the message from state */}
+        <MessageView message={"Implement me!"} />
+
+        {/* Optional TODO: pass the history of guesses */}
+        <HistoryView history={[]} />
       </div>
     </div>
   );

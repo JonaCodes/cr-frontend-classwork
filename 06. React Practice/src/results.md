@@ -1,6 +1,10 @@
 ### Exercise 1
 <img width="377" height="239" alt="image" src="https://github.com/user-attachments/assets/49a47e56-ab62-4915-9e91-9c4ff345ca61" />
 
+With negative value:<br/>
+<img width="359" height="225" alt="image" src="https://github.com/user-attachments/assets/b9b9351b-e06b-4838-b061-7f5ef67da519" />
+
+
 ### Exercise 2
 <img width="421" height="323" alt="image" src="https://github.com/user-attachments/assets/7c55f88e-3de2-4bd4-80e3-fc779fbcab2e" />
 

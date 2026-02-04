@@ -2,3 +2,4 @@
 *gpt*
 node_modules
 dist/*
+.secret

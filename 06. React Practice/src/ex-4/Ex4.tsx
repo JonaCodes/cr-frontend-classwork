@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./ex4.css";
 
 export default function Ex4() {
@@ -41,16 +40,16 @@ export default function Ex4() {
     },
   ];
 
-  const [starredMovieIds, setStarredMovieIds] = useState<number[]>([]);
+  /**
+   * Create a state that tracks the starred movie IDs (this is an array of numbers)
+   */
+
+  // Note: this const is only here so you don't see a blank page
+  // We do *NOT* want this array, we want to store the IDs in state
+  const starredMovieIds = [];
 
   function toggleFavorite(movieId: number) {
-    const isMovieStarred = starredMovieIds.includes(movieId);
-
-    if (!isMovieStarred) {
-      setStarredMovieIds([...starredMovieIds, movieId]);
-    } else {
-      setStarredMovieIds(starredMovieIds.filter((id) => id !== movieId));
-    }
+    // TODO: implement
   }
 
   const starredMovies = movies.filter((movie) =>
@@ -62,7 +61,7 @@ export default function Ex4() {
       <div className="favorites-header">
         <h3>Favorites ({starredMovieIds.length})</h3>
 
-        <button className="clear-button" onClick={() => setStarredMovieIds([])}>
+        <button className="clear-button" /* TODO: implement the onClick */>
           Clear
         </button>
       </div>
@@ -100,7 +99,7 @@ export default function Ex4() {
 
                 <button
                   className={`favorite-button ${isFavorite ? "favorite" : ""}`}
-                  onClick={() => toggleFavorite(movie.id)}
+                  //   TODO: implement the onClick
                 >
                   {isFavorite ? "★" : "☆"}
                 </button>

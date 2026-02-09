@@ -1,0 +1,592 @@
+[
+  {
+    "id": "tx-1001",
+    "userId": "u-1001",
+    "userName": "Shachar Hasson",
+    "amount": 2400,
+    "date": "2025-01-03T14:12",
+    "description": "Direct Deposit",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1002",
+    "userId": "u-1001",
+    "userName": "Shachar Hasson",
+    "amount": 78.45,
+    "date": "2025-01-11T19:22",
+    "description": "Restaurant - Starbucks",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1003",
+    "userId": "u-1001",
+    "userName": "Shachar Hasson",
+    "amount": 132.18,
+    "date": "2025-02-08T17:40",
+    "description": "Grocery Store - Whole Foods",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1004",
+    "userId": "u-1001",
+    "userName": "Shachar Hasson",
+    "amount": 45.22,
+    "date": "2025-02-18T09:33",
+    "description": "Gas Station - Shell",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1005",
+    "userId": "u-1001",
+    "userName": "Shachar Hasson",
+    "amount": 1899.99,
+    "date": "2025-03-04T21:15",
+    "description": "Electronics - Best Buy",
+    "suspicious": true,
+    "status": "rejected"
+  },
+  {
+    "id": "tx-1006",
+    "userId": "u-1001",
+    "userName": "Shachar Hasson",
+    "amount": 14.99,
+    "date": "2025-03-17T05:10",
+    "description": "Subscription - Netflix",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1007",
+    "userId": "u-1001",
+    "userName": "Shachar Hasson",
+    "amount": 320,
+    "date": "2025-04-02T12:28",
+    "description": "ATM Withdrawal",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1008",
+    "userId": "u-1001",
+    "userName": "Shachar Hasson",
+    "amount": 950,
+    "date": "2025-04-22T15:06",
+    "description": "Wire Transfer",
+    "suspicious": true,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1009",
+    "userId": "u-1001",
+    "userName": "Shachar Hasson",
+    "amount": 210,
+    "date": "2025-05-06T08:45",
+    "description": "Utility Bill - Pacific Gas & Electric",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1010",
+    "userId": "u-1001",
+    "userName": "Shachar Hasson",
+    "amount": 66.3,
+    "date": "2025-05-27T20:05",
+    "description": "Pharmacy - CVS",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1011",
+    "userId": "u-1002",
+    "userName": "Nilli Etzel",
+    "amount": 3100,
+    "date": "2025-01-05T13:01",
+    "description": "Direct Deposit",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1012",
+    "userId": "u-1002",
+    "userName": "Nilli Etzel",
+    "amount": 124.67,
+    "date": "2025-01-18T18:44",
+    "description": "Online Purchase - Amazon",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1013",
+    "userId": "u-1002",
+    "userName": "Nilli Etzel",
+    "amount": 22.15,
+    "date": "2025-02-03T07:51",
+    "description": "Mobile Payment - Uber",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1014",
+    "userId": "u-1002",
+    "userName": "Nilli Etzel",
+    "amount": 100,
+    "date": "2025-02-23T11:17",
+    "description": "ATM Withdrawal",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1015",
+    "userId": "u-1002",
+    "userName": "Nilli Etzel",
+    "amount": 240.75,
+    "date": "2025-03-12T16:34",
+    "description": "Insurance Premium",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1016",
+    "userId": "u-1002",
+    "userName": "Nilli Etzel",
+    "amount": 2750,
+    "date": "2025-03-25T22:10",
+    "description": "Wire Transfer",
+    "suspicious": true,
+    "status": "rejected"
+  },
+  {
+    "id": "tx-1017",
+    "userId": "u-1002",
+    "userName": "Nilli Etzel",
+    "amount": 1450,
+    "date": "2025-04-01T09:02",
+    "description": "Rent Payment",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1018",
+    "userId": "u-1002",
+    "userName": "Nilli Etzel",
+    "amount": 12.4,
+    "date": "2025-04-14T15:55",
+    "description": "Restaurant - Starbucks",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1019",
+    "userId": "u-1002",
+    "userName": "Nilli Etzel",
+    "amount": 180.32,
+    "date": "2025-05-09T12:24",
+    "description": "Utility Bill - Pacific Gas & Electric",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1020",
+    "userId": "u-1002",
+    "userName": "Nilli Etzel",
+    "amount": 58.23,
+    "date": "2025-05-29T08:49",
+    "description": "Online Purchase - Amazon",
+    "suspicious": true,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1021",
+    "userId": "u-1003",
+    "userName": "King Arthur",
+    "amount": 2800,
+    "date": "2025-01-07T14:56",
+    "description": "Direct Deposit",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1022",
+    "userId": "u-1003",
+    "userName": "King Arthur",
+    "amount": 201.45,
+    "date": "2025-01-22T18:07",
+    "description": "Grocery Store - Whole Foods",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1023",
+    "userId": "u-1003",
+    "userName": "King Arthur",
+    "amount": 34.77,
+    "date": "2025-02-10T10:12",
+    "description": "Pharmacy - CVS",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1024",
+    "userId": "u-1003",
+    "userName": "King Arthur",
+    "amount": 14.99,
+    "date": "2025-02-24T05:32",
+    "description": "Subscription - Netflix",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1025",
+    "userId": "u-1003",
+    "userName": "King Arthur",
+    "amount": 62.14,
+    "date": "2025-03-11T21:23",
+    "description": "Gas Station - Shell",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1026",
+    "userId": "u-1003",
+    "userName": "King Arthur",
+    "amount": 18.92,
+    "date": "2025-03-28T17:02",
+    "description": "Mobile Payment - Uber",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1027",
+    "userId": "u-1003",
+    "userName": "King Arthur",
+    "amount": 500,
+    "date": "2025-04-13T08:15",
+    "description": "ATM Withdrawal",
+    "suspicious": true,
+    "status": "rejected"
+  },
+  {
+    "id": "tx-1028",
+    "userId": "u-1003",
+    "userName": "King Arthur",
+    "amount": 899,
+    "date": "2025-04-30T19:26",
+    "description": "Electronics - Best Buy",
+    "suspicious": true,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1029",
+    "userId": "u-1003",
+    "userName": "King Arthur",
+    "amount": 156.09,
+    "date": "2025-05-16T12:41",
+    "description": "Utility Bill - Pacific Gas & Electric",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1030",
+    "userId": "u-1003",
+    "userName": "King Arthur",
+    "amount": 75.88,
+    "date": "2025-05-31T16:03",
+    "description": "Online Purchase - Amazon",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1031",
+    "userId": "u-1004",
+    "userName": "Yvgeny Bear",
+    "amount": 3550,
+    "date": "2025-01-04T13:40",
+    "description": "Direct Deposit",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1032",
+    "userId": "u-1004",
+    "userName": "Yvgeny Bear",
+    "amount": 1800,
+    "date": "2025-01-26T07:26",
+    "description": "Rent Payment",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1033",
+    "userId": "u-1004",
+    "userName": "Yvgeny Bear",
+    "amount": 9.75,
+    "date": "2025-02-12T15:48",
+    "description": "Restaurant - Starbucks",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1034",
+    "userId": "u-1004",
+    "userName": "Yvgeny Bear",
+    "amount": 27.6,
+    "date": "2025-02-27T18:29",
+    "description": "Mobile Payment - Uber",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1035",
+    "userId": "u-1004",
+    "userName": "Yvgeny Bear",
+    "amount": 49.95,
+    "date": "2025-03-15T22:01",
+    "description": "Online Purchase - Amazon",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1036",
+    "userId": "u-1004",
+    "userName": "Yvgeny Bear",
+    "amount": 3200,
+    "date": "2025-03-31T10:22",
+    "description": "Wire Transfer",
+    "suspicious": true,
+    "status": "rejected"
+  },
+  {
+    "id": "tx-1037",
+    "userId": "u-1004",
+    "userName": "Yvgeny Bear",
+    "amount": 71.3,
+    "date": "2025-04-19T08:17",
+    "description": "Gas Station - Shell",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1038",
+    "userId": "u-1004",
+    "userName": "Yvgeny Bear",
+    "amount": 146.5,
+    "date": "2025-05-03T11:34",
+    "description": "Grocery Store - Whole Foods",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1039",
+    "userId": "u-1004",
+    "userName": "Yvgeny Bear",
+    "amount": 233.44,
+    "date": "2025-05-21T16:19",
+    "description": "Utility Bill - Pacific Gas & Electric",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1040",
+    "userId": "u-1004",
+    "userName": "Yvgeny Bear",
+    "amount": 198.6,
+    "date": "2025-06-02T20:31",
+    "description": "Insurance Premium",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1041",
+    "userId": "u-1005",
+    "userName": "Lena Bot",
+    "amount": 2950,
+    "date": "2025-01-09T13:18",
+    "description": "Direct Deposit",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1042",
+    "userId": "u-1005",
+    "userName": "Lena Bot",
+    "amount": 215.34,
+    "date": "2025-01-24T21:07",
+    "description": "Online Purchase - Amazon",
+    "suspicious": true,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1043",
+    "userId": "u-1005",
+    "userName": "Lena Bot",
+    "amount": 18.45,
+    "date": "2025-02-15T08:10",
+    "description": "Restaurant - Starbucks",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1044",
+    "userId": "u-1005",
+    "userName": "Lena Bot",
+    "amount": 41.2,
+    "date": "2025-03-03T16:50",
+    "description": "Pharmacy - CVS",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1045",
+    "userId": "u-1005",
+    "userName": "Lena Bot",
+    "amount": 14.99,
+    "date": "2025-03-20T05:58",
+    "description": "Subscription - Netflix",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1046",
+    "userId": "u-1005",
+    "userName": "Lena Bot",
+    "amount": 58.8,
+    "date": "2025-04-05T18:23",
+    "description": "Gas Station - Shell",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1047",
+    "userId": "u-1005",
+    "userName": "Lena Bot",
+    "amount": 205.67,
+    "date": "2025-04-17T11:02",
+    "description": "Utility Bill - Pacific Gas & Electric",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1048",
+    "userId": "u-1005",
+    "userName": "Lena Bot",
+    "amount": 4100,
+    "date": "2025-05-01T23:11",
+    "description": "Wire Transfer",
+    "suspicious": true,
+    "status": "rejected"
+  },
+  {
+    "id": "tx-1049",
+    "userId": "u-1005",
+    "userName": "Lena Bot",
+    "amount": 1600,
+    "date": "2025-05-19T07:37",
+    "description": "Rent Payment",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1050",
+    "userId": "u-1005",
+    "userName": "Lena Bot",
+    "amount": 33.11,
+    "date": "2025-06-04T19:58",
+    "description": "Mobile Payment - Uber",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1051",
+    "userId": "u-1001",
+    "userName": "Shachar Hasson",
+    "amount": 4200,
+    "date": "2026-02-06T14:33",
+    "description": "Wire Transfer",
+    "suspicious": false,
+    "status": "approved"
+  },
+  {
+    "id": "tx-1052",
+    "userId": "u-1001",
+    "userName": "Shachar Hasson",
+    "amount": 16.89,
+    "date": "2026-02-07T17:44",
+    "description": "Restaurant - Starbucks",
+    "suspicious": false,
+    "status": "rejected"
+  },
+  {
+    "id": "tx-1053",
+    "userId": "u-1002",
+    "userName": "Nilli Etzel",
+    "amount": 4999.5,
+    "date": "2026-02-05T09:16",
+    "description": "Wire Transfer",
+    "suspicious": true,
+    "status": "pending"
+  },
+  {
+    "id": "tx-1054",
+    "userId": "u-1002",
+    "userName": "Nilli Etzel",
+    "amount": 340.2,
+    "date": "2026-02-08T11:24",
+    "description": "Online Purchase - Amazon",
+    "suspicious": false,
+    "status": "pending"
+  },
+  {
+    "id": "tx-1055",
+    "userId": "u-1003",
+    "userName": "King Arthur",
+    "amount": 2600,
+    "date": "2026-02-04T22:02",
+    "description": "Electronics - Best Buy",
+    "suspicious": false,
+    "status": "pending"
+  },
+  {
+    "id": "tx-1056",
+    "userId": "u-1003",
+    "userName": "King Arthur",
+    "amount": 85.4,
+    "date": "2026-02-08T13:15",
+    "description": "ATM Withdrawal",
+    "suspicious": false,
+    "status": "pending"
+  },
+  {
+    "id": "tx-1057",
+    "userId": "u-1004",
+    "userName": "Yvgeny Bear",
+    "amount": 1120.75,
+    "date": "2026-02-03T06:48",
+    "description": "ATM Withdrawal",
+    "suspicious": true,
+    "status": "pending"
+  },
+  {
+    "id": "tx-1058",
+    "userId": "u-1004",
+    "userName": "Yvgeny Bear",
+    "amount": 64.2,
+    "date": "2026-02-07T20:30",
+    "description": "Grocery Store - Whole Foods",
+    "suspicious": false,
+    "status": "pending"
+  },
+  {
+    "id": "tx-1059",
+    "userId": "u-1005",
+    "userName": "Lena Bot",
+    "amount": 745,
+    "date": "2026-02-08T15:42",
+    "description": "Online Purchase - Amazon",
+    "suspicious": true,
+    "status": "pending"
+  }
+]

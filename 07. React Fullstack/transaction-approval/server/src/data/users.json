@@ -1,0 +1,32 @@
+[
+  {
+    "id": "u-1001",
+    "name": "Shachar Hasson",
+    "accountNumber": "4829017356",
+    "joinDate": "2021-03-12T00:00"
+  },
+  {
+    "id": "u-1002",
+    "name": "Nilli Etzel",
+    "accountNumber": "5901348271",
+    "joinDate": "2019-11-05T00:00"
+  },
+  {
+    "id": "u-1003",
+    "name": "King Arthur",
+    "accountNumber": "7142083950",
+    "joinDate": "2020-07-19T00:00"
+  },
+  {
+    "id": "u-1004",
+    "name": "Yvgeny Bear",
+    "accountNumber": "8624901735",
+    "joinDate": "2018-02-27T00:00"
+  },
+  {
+    "id": "u-1005",
+    "name": "Lena Bot",
+    "accountNumber": "3069718425",
+    "joinDate": "2022-09-03T00:00"
+  }
+]

@@ -7,13 +7,11 @@ interface TransactionListProps {
     transactionId: string,
     status: string,
   ) => void | Promise<void>;
-  onViewHistory: (userId: string) => void | Promise<void>;
 }
 
 export default function TransactionList({
   transactions,
   handleTransactionStatusUpdate,
-  onViewHistory,
 }: TransactionListProps) {
   if (transactions.length === 0) {
     return <p className="empty-state">No pending transactions.</p>;
@@ -30,7 +28,6 @@ export default function TransactionList({
             key={transaction.id}
             transaction={transaction}
             handleTransactionStatusUpdate={handleTransactionStatusUpdate}
-            onViewHistory={onViewHistory}
           />
         ))}
     </section>

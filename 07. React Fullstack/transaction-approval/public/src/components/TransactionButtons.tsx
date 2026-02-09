@@ -2,7 +2,6 @@ import type { Transaction } from "../types";
 
 interface TransactionButtonsProps {
   transaction: Transaction;
-  onViewHistory: (userId: string) => void | Promise<void>;
   handleTransactionStatusUpdate: (
     transactionId: string,
     status: string,
@@ -11,7 +10,6 @@ interface TransactionButtonsProps {
 
 export default function TransactionButtons({
   transaction,
-  onViewHistory,
   handleTransactionStatusUpdate,
 }: TransactionButtonsProps) {
   const approveTransaction = async () => {
@@ -40,15 +38,6 @@ export default function TransactionButtons({
         title="Reject"
       >
         Reject
-      </button>
-
-      <button
-        className="action-button history-button"
-        type="button"
-        onClick={() => onViewHistory(transaction.userId)}
-        title="View History"
-      >
-        History
       </button>
     </div>
   );

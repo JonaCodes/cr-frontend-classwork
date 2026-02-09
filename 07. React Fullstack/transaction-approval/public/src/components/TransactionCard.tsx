@@ -4,7 +4,6 @@ import TransactionDetails from "./TransactionDetails";
 
 interface TransactionCardProps {
   transaction: Transaction;
-  onViewHistory: (userId: string) => void | Promise<void>;
   handleTransactionStatusUpdate: (
     transactionId: string,
     status: string,
@@ -13,7 +12,6 @@ interface TransactionCardProps {
 
 export default function TransactionCard({
   transaction,
-  onViewHistory,
   handleTransactionStatusUpdate,
 }: TransactionCardProps) {
   return (
@@ -34,7 +32,6 @@ export default function TransactionCard({
       <TransactionButtons
         transaction={transaction}
         handleTransactionStatusUpdate={handleTransactionStatusUpdate}
-        onViewHistory={onViewHistory}
       />
     </article>
   );

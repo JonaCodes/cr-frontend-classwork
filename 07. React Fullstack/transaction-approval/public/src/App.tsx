@@ -2,22 +2,11 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import TransactionList from "./components/TransactionList";
-import UserHistoryModal from "./components/UserHistoryModal";
-import {
-  fetchTransactions,
-  fetchUserHistory,
-  updateTransactionStatus,
-} from "./api/client";
-import type { Transaction, UserHistoryResponse } from "./types";
+import { fetchTransactions, updateTransactionStatus } from "./api/client";
+import type { Transaction } from "./types";
 
 function App() {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-
-  const [selectedUserId, setSelectedUserId] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedUserHistory, setSelectedUserHistory] =
-    useState<UserHistoryResponse | null>(null);
-  const [isHistoryLoading, setIsHistoryLoading] = useState(false);
 
   const loadTransactionData = async () => {
     try {
@@ -35,23 +24,6 @@ function App() {
   ) => {
     await updateTransactionStatus(updatedTransactionId, status);
     await loadTransactionData();
-  };
-
-  const handleViewHistory = async (userId: string) => {
-    setSelectedUserId(userId);
-    setIsModalOpen(true);
-    setIsHistoryLoading(true);
-
-    const historyData = await fetchUserHistory(userId);
-
-    setSelectedUserHistory(historyData);
-    setIsHistoryLoading(false);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedUserId("");
-    setSelectedUserHistory(null);
   };
 
   useEffect(() => {
@@ -72,14 +44,6 @@ function App() {
       <TransactionList
         transactions={pendingTransactions}
         handleTransactionStatusUpdate={handleTransactionStatusUpdate}
-        onViewHistory={handleViewHistory}
-      />
-      <UserHistoryModal
-        isOpen={isModalOpen}
-        selectedUserId={selectedUserId}
-        isLoading={isHistoryLoading}
-        userHistory={selectedUserHistory}
-        onClose={handleCloseModal}
       />
     </div>
   );

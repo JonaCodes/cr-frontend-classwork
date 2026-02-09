@@ -4,18 +4,9 @@ import TransactionDetails from "./TransactionDetails";
 
 interface TransactionCardProps {
   transaction: Transaction;
-  onViewHistory: (userId: string) => void | Promise<void>;
-  handleTransactionStatusUpdate: (
-    transactionId: string,
-    status: string,
-  ) => void | Promise<void>;
 }
 
-export default function TransactionCard({
-  transaction,
-  onViewHistory,
-  handleTransactionStatusUpdate,
-}: TransactionCardProps) {
+export default function TransactionCard({ transaction }: TransactionCardProps) {
   return (
     <article
       className={`transaction-card ${transaction.suspicious ? "suspicious" : ""}`}
@@ -31,11 +22,7 @@ export default function TransactionCard({
         <TransactionDetails transaction={transaction} />
       </div>
 
-      <TransactionButtons
-        transaction={transaction}
-        handleTransactionStatusUpdate={handleTransactionStatusUpdate}
-        onViewHistory={onViewHistory}
-      />
+      <TransactionButtons transaction={transaction} />
     </article>
   );
 }

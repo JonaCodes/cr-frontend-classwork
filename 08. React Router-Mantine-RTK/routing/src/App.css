@@ -1,42 +1,300 @@
-#root {
-  max-width: 1280px;
+/* --- App Shell & Layout --- */
+.appShell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Navigation --- */
+.topBar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--bg-surface-translucent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.appTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+}
+
+.topNav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+}
+
+.navItem {
+  text-decoration: none;
+  color: var(--text-muted);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s var(--ease-smooth);
+  position: relative;
+}
+
+.navItem:hover {
+  color: #fff;
+  background: transparent;
+}
+
+.navItemActive {
+  background-color: rgba(255, 255, 255, 0.08); /* Very subtle background */
+  color: var(--primary); /* Pink text */
+  font-weight: 600;
+  box-shadow: none; /* Remove glow for subtlety */
+}
+
+/* --- Main Content --- */
+.mainContent {
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 1.5rem 5rem;
+  flex: 1;
+}
+
+.pageSection {
+  animation: fadeUp 0.6s var(--ease-smooth);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pageSection h1 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  background: linear-gradient(180deg, #fff 0%, #cbd5e1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+}
+
+.pageSection h1 + p {
+  font-size: 1.25rem;
+  color: #94a3b8;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+/* --- Buttons --- */
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+button {
+  border: 0;
+  color: var(--primary-glow);
+  padding: 0;
+  background-color: transparent;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-spring);
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  color: var(--primary);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* --- Cards --- */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.cardLink {
+  text-decoration: none;
+  display: block;
+}
+
+.cardItem {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-top: 1px solid var(--border-highlight);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s var(--ease-smooth);
+  position: relative;
+}
+
+.holidayItem {
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.holidayDate {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.cardLink:hover .cardItem {
+  background: var(--bg-surface-hover);
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(236, 72, 153, 0.4);
+  box-shadow:
+    0 20px 40px -10px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(236, 72, 153, 0.1);
+}
+
+.cardItem h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.cardItem:hover h2 {
+  color: var(--primary);
+}
+
+.cardItem p {
+  color: var(--primary);
+  font-weight: 500;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Detail Card specifically */
+.detailCard {
+  background: var(--bg-surface);
+  padding: 3rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2rem;
+}
+
+.backHomeLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.2s var(--ease-smooth);
+}
+
+.backHomeLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Page Specific Styles --- */
+
+/* Home Page */
+.homeContainer {
+  margin-top: 4rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pageSection .homeTitle {
+  font-size: 8.5rem;
+  letter-spacing: 0.05em;
+  padding-block: 5rem;
+  background: var(--primary-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  line-height: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Birthday Month Page */
+.monthSection {
+  text-align: center;
+  margin-top: 3rem;
 }
 
-.card {
-  padding: 2em;
+.pageSection .monthTitle {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  background: var(--primary-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+  font-family: var(--font-display);
+  font-weight: 800;
 }
 
-.read-the-docs {
-  color: #888;
+.monthMessage {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* Not Found Page */
+.notFoundImage {
+  width: 100%;
+  border-radius: 1rem;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 2rem;
 }

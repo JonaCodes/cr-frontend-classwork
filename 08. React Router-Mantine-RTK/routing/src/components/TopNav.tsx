@@ -1,29 +1,13 @@
-import { NavLink } from "react-router-dom";
-
 function TopNav() {
   return (
     <header className="topBar">
       <p className="appTitle">Click Around</p>
       <nav className="topNav">
-        <NavLink
-          to="/"
-          className={({ isActive }) => `navItem ${isActive && "navItemActive"}`}
-          end
-        >
-          Home
-        </NavLink>
-        <NavLink
-          to="/birthdays"
-          className={({ isActive }) => `navItem ${isActive && "navItemActive"}`}
-        >
-          Birthdays
-        </NavLink>
-        <NavLink
-          to="/holidays"
-          className={({ isActive }) => `navItem ${isActive && "navItemActive"}`}
-        >
-          Holidays
-        </NavLink>
+        {/* TODO: make these actual links that take us to the right pages */}
+        {/* Note that you want to add the class "navItemActive" to the link that is currently active (Hint: NavLink provides an isActive boolean) */}
+        <div className="navItem">Home</div>
+        <div className="navItem">Birthdays</div>
+        <div className="navItem">Holidays</div>
       </nav>
     </header>
   );

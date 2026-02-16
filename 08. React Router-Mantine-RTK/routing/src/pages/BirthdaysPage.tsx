@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { birthdayMessages } from "../data/birthdayMessages";
 
 function BirthdaysPage() {
@@ -8,11 +7,10 @@ function BirthdaysPage() {
 
       <div className="cardGrid">
         {Object.keys(birthdayMessages).map((month) => (
-          <Link key={month} to={`/birthdays/${month}`} className="cardLink">
-            <div className="cardItem">
-              <h2>{month.toUpperCase()}</h2>
-            </div>
-          </Link>
+          // How do we make this card take us to the actual birthday card page?
+          <div className="cardItem">
+            <h2>{month.toUpperCase()}</h2>
+          </div>
         ))}
       </div>
     </section>

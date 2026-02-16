@@ -1,16 +1,11 @@
-import { useNavigate, useParams } from "react-router-dom";
 import { birthdayMessages } from "../data/birthdayMessages";
 
 function BirthdayMonthPage() {
-  const { month } = useParams();
-  const navigate = useNavigate();
-
+  const month = "january"; // TODO: get this from the url, not hard-coded like this
   const message = birthdayMessages[month || ""];
 
   const renderBackButton = () => {
-    return (
-      <button onClick={() => navigate("/birthdays")}>back to all months</button>
-    );
+    return <button>back to all months</button>;
   };
 
   if (!message) {
